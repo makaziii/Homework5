@@ -1,7 +1,7 @@
 ﻿//QUESTION1
 public class Vehicle
 {
-    // Properties for Make, Model, and Year
+    // Properties
     public string Make { get; set; }
     public string Model { get; set; }
     public int Year { get; set; }
@@ -14,7 +14,7 @@ public class Vehicle
         Year = year;
     }
 
-    // Override ToString() method
+    // Override ToString() 
     public override string ToString()
     {
         return $"{Year} {Make} {Model}";
@@ -23,7 +23,7 @@ public class Vehicle
 
 public class Car : Vehicle
 {
-    // Additional property for Number of Doors
+    // Additional property
     public int NumberOfDoors { get; set; }
 
     // Constructor
@@ -41,7 +41,7 @@ public class Car : Vehicle
 
 public class Motorcycle : Vehicle
 {
-    // Additional property for HasSidecar
+    // Additional property
     public bool HasSidecar { get; set; }
 
     // Constructor
@@ -66,7 +66,7 @@ public class Employee
     public string Name { get; set; }
     public double Salary { get; set; }
 
-    // 3. Gets and Sets (Handled automatically)
+    // 3. Gets and Sets
 
     // 4. Constructor
     public Employee(string name, double salary)
@@ -87,7 +87,7 @@ public class Manager : Employee
     // 2. Properties
     public int NumberOfEmployeesManaged { get; set; }
 
-    // 3. Gets and Sets (Handled automatically)
+    // 3. Gets and Sets 
 
     // 4. Constructor
     public Manager(string name, double salary, int numberOfEmployeesManaged)
@@ -102,22 +102,21 @@ public class Manager : Employee
         return $"Manager: {Name}, Salary: ${Salary}, Employees Managed: {NumberOfEmployeesManaged}";
     }
 }
-// 1. Create Class
+//Create Class
 public class Engineer : Employee
 {
-    // 2. Properties
+    // Properties
     public string Specialization { get; set; }
 
-    // 3. Gets and Sets (Handled automatically)
 
-    // 4. Constructor
+    // Constructor
     public Engineer(string name, double salary, string specialization)
         : base(name, salary)
     {
         Specialization = specialization;
     }
 
-    // 5. ToString Method
+    // ToString Method
     public override string ToString()
     {
         return $"Engineer: {Name}, Salary: ${Salary}, Specialization: {Specialization}";
@@ -136,7 +135,7 @@ public abstract class Shape
         Color = color;
     }
 
-    // Abstract method to be implemented by subclasses
+    // Abstract method
     public abstract double GetArea();
 
     // Override ToString() method
@@ -147,7 +146,7 @@ public abstract class Shape
 }
 public class Rectangle : Shape
 {
-    // Properties for Width and Height
+    // Properties
     public double Width { get; set; }
     public double Height { get; set; }
 
@@ -172,7 +171,7 @@ public class Rectangle : Shape
 }
 public class Circle : Shape
 {
-    // Property for Radius
+    
     public double Radius { get; set; }
 
     // Constructor
@@ -205,7 +204,7 @@ public class Animal
         Name = name;
     }
 
-    // Virtual method to be overridden by subclasses
+    // Virtual method
     public virtual string MakeSound()
     {
         return "Some generic animal sound";
@@ -240,17 +239,16 @@ public class Cat : Animal
     }
 }
 //QUESTION5
-// 1. Create Class
+// Create Class
 public class Book
 {
-    // 2. Properties
+    //Properties
     public string Title { get; set; }
     public string Author { get; set; }
     public int YearPublished { get; set; }
 
-    // 3. Gets and Sets (Handled automatically with the properties above)
 
-    // 4. Constructor
+    // Constructor
     public Book(string title, string author, int yearPublished)
     {
         Title = title;
@@ -258,7 +256,7 @@ public class Book
         YearPublished = yearPublished;
     }
 
-    // 5. ToString Method
+    //ToString Method
     public override string ToString()
     {
         return $"{Title} by {Author} ({YearPublished})";
@@ -270,7 +268,6 @@ public class EBook : Book
     //Properties
     public double FileSizeMB { get; set; }
 
-    //Gets and Sets
 
     //Constructor
     public EBook(string title, string author, int yearPublished, double fileSizeMB)
@@ -288,10 +285,8 @@ public class EBook : Book
 //Create Class
 public class PrintedBook : Book
 {
-    //Properties
+  
     public int PageCount { get; set; }
-
-    //Gets and Sets (Handled automatically)
 
     //Constructor
     public PrintedBook(string title, string author, int yearPublished, int pageCount)
