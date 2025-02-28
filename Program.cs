@@ -59,44 +59,42 @@ public class Motorcycle : Vehicle
 
 //QUESTION2
 
-// 1. Create Class
+//Create Class
 public class Employee
 {
-    // 2. Properties
+    //Properties
     public string Name { get; set; }
     public double Salary { get; set; }
 
-    // 3. Gets and Sets
 
-    // 4. Constructor
+    //Constructor
     public Employee(string name, double salary)
     {
         Name = name;
         Salary = salary;
     }
 
-    // 5. ToString Method
+    //ToString Method
     public override string ToString()
     {
         return $"Employee: {Name}, Salary: ${Salary}";
     }
 }
-// 1. Create Class
+//Create Class
 public class Manager : Employee
 {
-    // 2. Properties
+    // Properties
     public int NumberOfEmployeesManaged { get; set; }
 
-    // 3. Gets and Sets 
 
-    // 4. Constructor
+    //Constructor
     public Manager(string name, double salary, int numberOfEmployeesManaged)
         : base(name, salary)
     {
         NumberOfEmployeesManaged = numberOfEmployeesManaged;
     }
 
-    // 5. ToString Method
+    //ToString Method
     public override string ToString()
     {
         return $"Manager: {Name}, Salary: ${Salary}, Employees Managed: {NumberOfEmployeesManaged}";
@@ -180,7 +178,7 @@ public class Circle : Shape
         Radius = radius;
     }
 
-    // Implement GetArea()
+    //GetArea()
     public override double GetArea()
     {
         return Math.PI * Radius * Radius;
